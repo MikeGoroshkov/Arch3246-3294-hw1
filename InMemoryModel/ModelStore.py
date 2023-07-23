@@ -9,8 +9,8 @@ from ModelElements.Flash import Flash
 from ModelElements.PoligonalModel import PoligonalModel
 from ModelElements.Scene import Scene
 
-from IModelChangedObserver import IModelChangedObserver
-from IModelChanger import IModelChanger
+from InMemoryModel.IModelChangedObserver import IModelChangedObserver
+from InMemoryModel.IModelChanger import IModelChanger
 
 Model1 = PoligonalModel()
 Model2 = PoligonalModel()
@@ -35,7 +35,5 @@ class ModelStore(object):
         return result
 
 ModelStore1 = ModelStore()
-Scene3 = ModelStore1.GetScene(1)
-ModelStore1.NotifyChange()
 
 
