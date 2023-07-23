@@ -29,9 +29,13 @@ class ModelStore(object):
     Cameras = [Camera1, Camera2]
     __changedObservers = [IModelChangedObserver]
 
-    def GetScene(int_arg):
+    def GetScene(self, int_arg):
         if int_arg:
             result = Scene()
         return result
+
+ModelStore1 = ModelStore()
+Scene3 = ModelStore1.GetScene(1)
+ModelStore1.NotifyChange()
 
 
